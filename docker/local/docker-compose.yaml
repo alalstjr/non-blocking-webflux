@@ -1,0 +1,14 @@
+version: "3.7" # 파일 규격 버전
+services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
+  db: # 서비스 명
+    image: mongo:4.2 # 사용할 이미지
+    restart: always
+    container_name: mongo-db # 컨테이너 이름 설정
+    ports:
+      - "27017:27017" # 접근 포트 설정 (컨테이너 외부:컨테이너 내부)
+    environment: # -e 옵션
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+      - TZ=Asia/Seoul
+    volumes:
+      - ~/data:/data/db # -v 옵션 (다렉토리 마운트 설정)
