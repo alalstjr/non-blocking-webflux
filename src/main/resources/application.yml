@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      database: testdb
+      database: mongodb_tutorial
       host: localhost
       port: 27027
 
