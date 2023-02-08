@@ -1,9 +1,12 @@
 spring:
   data:
     mongodb:
-      database: mongodb_tutorial
       host: localhost
-      port: 27027
+      port: 27017
+      authentication-database: admin
+      database: mongodb_tutorial
+      username: root
+      password: root
 
 server:
   port: 8080

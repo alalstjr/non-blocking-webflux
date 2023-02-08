@@ -1,6 +1,6 @@
-package com.jjunpro.iot.member.dto;
+package com.jjunpro.webflux.mvc.member.dto;
 
-import com.jjunpro.iot.member.entity.Member;
+import com.jjunpro.webflux.mvc.member.entity.Member;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

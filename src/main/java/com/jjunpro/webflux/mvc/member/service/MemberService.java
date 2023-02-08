@@ -1,8 +1,7 @@
-package com.jjunpro.iot.member.service;
+package com.jjunpro.webflux.mvc.member.service;
 
-import com.jjunpro.iot.member.dto.MemberDto;
-import com.jjunpro.iot.member.repository.MemberRepository;
-import lombok.NoArgsConstructor;
+import com.jjunpro.webflux.mvc.member.dto.MemberDto;
+import com.jjunpro.webflux.mvc.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Range;
 import org.springframework.stereotype.Service;
@@ -34,13 +33,15 @@ public class MemberService  {
     }
 
     public Mono<MemberDto> updateMember(Mono<MemberDto> memberDtoMono, String id) {
-        return this.memberRepository.findById(id)
-                                    .flatMap(
-                                        member -> memberDtoMono.map(MemberDto::dtoToEntity)
-                                                               .doOnNext(e -> e.setId(id))
-                                    )
-                                    .flatMap(this.memberRepository::save)
-                                    .map(MemberDto::entityToDto);
+        return this.memberRepository
+            .findById(id)
+            .flatMap(
+                member -> memberDtoMono
+                    .map(MemberDto::dtoToEntity)
+                    .doOnNext(e -> e.setId(id))
+            )
+            .flatMap(this.memberRepository::save)
+            .map(MemberDto::entityToDto);
     }
 
     public Mono<Void> deleteMember(String id) {

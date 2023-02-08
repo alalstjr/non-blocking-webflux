@@ -1,4 +1,4 @@
-package com.jjunpro.iot;
+package com.jjunpro.webflux.mvc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

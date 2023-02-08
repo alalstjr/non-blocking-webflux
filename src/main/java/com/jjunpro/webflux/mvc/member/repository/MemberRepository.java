@@ -1,7 +1,7 @@
-package com.jjunpro.iot.member.repository;
+package com.jjunpro.webflux.mvc.member.repository;
 
-import com.jjunpro.iot.member.dto.MemberDto;
-import com.jjunpro.iot.member.entity.Member;
+import com.jjunpro.webflux.mvc.member.dto.MemberDto;
+import com.jjunpro.webflux.mvc.member.entity.Member;
 import org.springframework.data.domain.Range;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;

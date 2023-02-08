@@ -1,7 +1,7 @@
-package com.jjunpro.iot.member.controller;
+package com.jjunpro.webflux.mvc.member.controller;
 
-import com.jjunpro.iot.member.dto.MemberDto;
-import com.jjunpro.iot.member.service.MemberService;
+import com.jjunpro.webflux.mvc.member.dto.MemberDto;
+import com.jjunpro.webflux.mvc.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

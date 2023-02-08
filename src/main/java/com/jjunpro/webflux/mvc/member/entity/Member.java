@@ -1,4 +1,4 @@
-package com.jjunpro.iot.member.entity;
+package com.jjunpro.webflux.mvc.member.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collation = "member")
+@Document(collection = "members")
 public class Member {
 
     @Id
