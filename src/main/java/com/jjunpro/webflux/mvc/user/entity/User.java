@@ -1,4 +1,4 @@
-package com.jjunpro.webflux.mvc.member.entity;
+package com.jjunpro.webflux.mvc.user.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,11 +11,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "members")
-public class Member {
+@Document(collection = "users")
+public class User {
 
     @Id
     private String id;
-    private String name;
-    private int    age;
+    private String username;
+    private String nickname;
 }
